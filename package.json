@@ -18,7 +18,9 @@
   "files": [
     "lib"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "is-css-color-hex": "^0.1.0"
+  },
   "devDependencies": {
     "babel-core": "^5.8.23",
     "chai": "^3.0.0",

@@ -1,4 +1,5 @@
 'use strict';
+import isCssColorHex from 'is-css-color-hex';
 
 /**
  * Shorten 6 character hexes to 3 characters
@@ -13,7 +14,7 @@ export default function shortenCssHex(hex) {
     throw new TypeError('Expected a string');
   }
 
-  if (hex[0] !== '#' || hex.length !== 4 && hex.length !== 7) {
+  if (!isCssColorHex(hex)) {
     throw new Error('Expected a string with 3 or 6 hex characters and a # prefix');
   }
 

@@ -72,6 +72,14 @@ describe('shorten-css-hex', () => {
     expect(sixCharacterTest).to.not.throw(Error);
   });
 
+  it('should throw error if hex contains non-hexadecimal characters', () => {
+    function test() {
+      shortenCssHex('#QWERTY');
+    }
+
+    expect(test).to.throw(Error, /Expected a string with 3 or 6 hex characters and a # prefix/);
+  });
+
   it('should return original hex if cannot be shortened', () => {
     expect(shortenCssHex('#123456')).to.eql('#123456');
     expect(shortenCssHex('#aBcDeF')).to.eql('#aBcDeF');
