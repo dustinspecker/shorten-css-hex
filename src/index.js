@@ -7,24 +7,21 @@
  * @return {String} - shortened hex
  */
 export default function shortenCssHex(hex) {
-  let hasHex, lowerHex;
+  let lowerHex;
 
   if (typeof hex !== 'string') {
     throw new TypeError('Expected a string');
   }
 
-  hasHex = hex[0] === '#';
-
-  // is valid 6 character hex with an optional hash prefix
-  if (hasHex && hex.length !== 7 || !hasHex && hex.length !== 6) {
-    return hex;
+  if (hex[0] !== '#' || hex.length !== 4 && hex.length !== 7) {
+    throw new Error('Expected a string with 3 or 6 hex characters and a # prefix');
   }
 
-  lowerHex = hex.replace('#', '').toLowerCase();
+  lowerHex = hex.toLowerCase();
 
   // three matching character pairs?
-  if (lowerHex[0] === lowerHex[1] && lowerHex[2] === lowerHex[3] && lowerHex[4] === lowerHex[5]) {
-    return (hasHex ? '#' : '') + lowerHex[0] + lowerHex[2] + lowerHex[4];
+  if (lowerHex[1] === lowerHex[2] && lowerHex[3] === lowerHex[4] && lowerHex[5] === lowerHex[6]) {
+    return '#' + lowerHex[1] + lowerHex[3] + lowerHex[5];
   }
 
   return hex;

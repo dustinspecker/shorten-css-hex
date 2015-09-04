@@ -18,14 +18,11 @@ import shortenCssHex from 'shorten-css-hex';
 shortenCssHex('#000000');
 // => '#000'
 
-shortenCssHex('AaBBcC');
-// => 'abc'
+shortenCssHex('#AaBBcC');
+// => '#abc'
 
 shortenCssHex('#123456');
 // => '#123456'
-
-shortenCssHex('123456');
-// => '123456'
 ```
 
 ### ES5
@@ -35,14 +32,11 @@ var shortenCssHex = require('shorten-css-hex');
 shortenCssHex('#000000');
 // => '#000'
 
-shortenCssHex('AaBBcC');
-// => 'abc'
+shortenCssHex('#AaBBcC');
+// => '#abc'
 
 shortenCssHex('#123456');
 // => '#123456'
-
-shortenCssHex('123456');
-// => '123456'
 ```
 
 ## LICENSE
