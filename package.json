@@ -39,9 +39,6 @@
     "gulp-babel": "^6.0.0",
     "gulp-eslint": "^1.0.0",
     "gulp-istanbul": "^0.10.0",
-    "gulp-jscs": "^3.0.2",
-    "gulp-jshint": "^2.0.0",
-    "gulp-mocha": "^2.1.0",
-    "jshint": "^2.8.0"
+    "gulp-mocha": "^2.1.0"
   }
 }
