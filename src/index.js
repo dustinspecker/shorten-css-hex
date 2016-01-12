@@ -20,7 +20,7 @@ module.exports = hex => {
 
   lowerHex = hex.toLowerCase()
 
-  // three matching character pairs?
+  // three matching character pairs
   if (lowerHex[1] === lowerHex[2] && lowerHex[3] === lowerHex[4] && lowerHex[5] === lowerHex[6]) {
     return `#${lowerHex[1]}${lowerHex[3]}${lowerHex[5]}`
   }
