@@ -1,5 +1,5 @@
-'use strict';
-import isCssColorHex from 'is-css-color-hex';
+'use strict'
+import isCssColorHex from 'is-css-color-hex'
 
 /**
  * Shorten 6 character hexes to 3 characters
@@ -8,22 +8,22 @@ import isCssColorHex from 'is-css-color-hex';
  * @return {String} - shortened hex
  */
 module.exports = function (hex) {
-  let lowerHex;
+  let lowerHex
 
   if (typeof hex !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string')
   }
 
   if (!isCssColorHex(hex)) {
-    throw new Error('Expected a string with 3 or 6 hex characters and a # prefix');
+    throw new Error('Expected a string with 3 or 6 hex characters and a # prefix')
   }
 
-  lowerHex = hex.toLowerCase();
+  lowerHex = hex.toLowerCase()
 
   // three matching character pairs?
   if (lowerHex[1] === lowerHex[2] && lowerHex[3] === lowerHex[4] && lowerHex[5] === lowerHex[6]) {
-    return '#' + lowerHex[1] + lowerHex[3] + lowerHex[5];
+    return `#${lowerHex[1]}${lowerHex[3]}${lowerHex[5]}`
   }
 
-  return hex;
-};
+  return hex
+}
