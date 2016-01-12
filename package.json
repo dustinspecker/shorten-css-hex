@@ -23,7 +23,7 @@
     "lib"
   ],
   "dependencies": {
-    "is-css-color-hex": "^0.1.0"
+    "is-css-color-hex": "^0.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.12",
