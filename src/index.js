@@ -7,7 +7,7 @@ import isCssColorHex from 'is-css-color-hex'
  * @throws {TypeError} - hex is not a string
  * @return {String} - shortened hex
  */
-module.exports = function (hex) {
+module.exports = hex => {
   let lowerHex
 
   if (typeof hex !== 'string') {
