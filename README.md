@@ -21,8 +21,14 @@ shortenCssHex('#000000');
 shortenCssHex('#AaBBcC');
 // => '#abc'
 
-shortenCssHex('#123456');
+shortencsshex('#112233ff');
+// => '#123f'
+
+shortencsshex('#123456');
 // => '#123456'
+
+shortencsshex('#123456ff');
+// => '#123456ff'
 ```
 
 ### ES5
@@ -35,8 +41,14 @@ shortenCssHex('#000000');
 shortenCssHex('#AaBBcC');
 // => '#abc'
 
-shortenCssHex('#123456');
+shortencsshex('#112233ff');
+// => '#123f'
+
+shortencsshex('#123456');
 // => '#123456'
+
+shortencsshex('#123456ff');
+// => '#123456ff'
 ```
 
 ## LICENSE

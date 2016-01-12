@@ -22,7 +22,13 @@ module.exports = hex => {
 
   // three matching character pairs
   if (lowerHex[1] === lowerHex[2] && lowerHex[3] === lowerHex[4] && lowerHex[5] === lowerHex[6]) {
-    return `#${lowerHex[1]}${lowerHex[3]}${lowerHex[5]}`
+    if (lowerHex.length === 7) {
+      return `#${lowerHex[1]}${lowerHex[3]}${lowerHex[5]}`
+    }
+
+    if (lowerHex[7] === lowerHex[8]) {
+      return `#${lowerHex[1]}${lowerHex[3]}${lowerHex[5]}${lowerHex[7]}`
+    }
   }
 
   return hex

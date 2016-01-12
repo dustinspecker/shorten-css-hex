@@ -34,7 +34,7 @@ describe('shorten-css-hex', () => {
     expect(test).to.throw(Error, /Expected a string with 3 or 6 hex characters and a # prefix/)
   })
 
-  it('should throw error if hex does not have 3 or 6 characters with a hash prefix', () => {
+  it('should throw error if hex does not have 3, 4, 6, or 8 characters with a hash prefix', () => {
     const fiveCharacterTest = () => shortenCssHex('#12345')
     expect(fiveCharacterTest).to.throw(Error, /Expected a string with 3 or 6 hex characters and a # prefix/)
 
@@ -53,10 +53,12 @@ describe('shorten-css-hex', () => {
   it('should return original hex if cannot be shortened', () => {
     expect(shortenCssHex('#123456')).to.eql('#123456')
     expect(shortenCssHex('#aBcDeF')).to.eql('#aBcDeF')
+    expect(shortenCssHex('#aabbcc0f')).to.eql('#aabbcc0f')
   })
 
   it('should return shortened hex if can be shortened', () => {
     expect(shortenCssHex('#000000')).to.eql('#000')
     expect(shortenCssHex('#AABBCC')).to.eql('#abc')
+    expect(shortenCssHex('#000000AA')).to.eql('#000a')
   })
 })
