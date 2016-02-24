@@ -8,8 +8,6 @@ import isCssColorHex from 'is-css-color-hex'
  * @return {String} - shortened hex
  */
 module.exports = hex => {
-  let lowerHex
-
   if (typeof hex !== 'string') {
     throw new TypeError('Expected a string')
   }
@@ -18,7 +16,7 @@ module.exports = hex => {
     throw new Error('Expected a string with 3 or 6 hex characters and a # prefix')
   }
 
-  lowerHex = hex.toLowerCase()
+  const lowerHex = hex.toLowerCase()
 
   // three matching character pairs
   if (lowerHex[1] === lowerHex[2] && lowerHex[3] === lowerHex[4] && lowerHex[5] === lowerHex[6]) {
